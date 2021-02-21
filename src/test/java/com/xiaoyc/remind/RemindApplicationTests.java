@@ -1,6 +1,7 @@
 package com.xiaoyc.remind;
 
 import com.xiaoyc.remind.dao.UserMapper;
+import com.xiaoyc.remind.util.RedisUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -18,6 +19,14 @@ class RemindApplicationTests {
 
     @Test
     public void add(){
-        userMapper.add(2);
+
+    }
+
+    @Resource
+    private RedisUtil redisUtil;
+
+    @Test
+    public void redisTest(){
+        redisUtil.set("xyc","ts");
     }
 }
