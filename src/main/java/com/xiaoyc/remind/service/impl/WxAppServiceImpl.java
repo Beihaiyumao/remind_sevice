@@ -1,26 +1,21 @@
 package com.xiaoyc.remind.service.impl;
 
 import cn.binarywang.wx.miniapp.api.WxMaMsgService;
-import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.api.impl.WxMaMsgServiceImpl;
-import cn.binarywang.wx.miniapp.api.impl.WxMaServiceImpl;
 import cn.binarywang.wx.miniapp.bean.WxMaSubscribeMessage;
-import cn.binarywang.wx.miniapp.config.impl.WxMaRedisConfigImpl;
-import com.xiaoyc.remind.service.WxAppService;
+import com.xiaoyc.remind.pojo.AddBrithdayRemindDTO;
+import com.xiaoyc.remind.service.WxAppMsgService;
 import com.xiaoyc.remind.util.WxUtil;
 import me.chanjar.weixin.common.error.WxErrorException;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import redis.clients.jedis.JedisPool;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 
 @Service
-public class WxAppServiceImpl implements WxAppService {
+public class WxAppServiceImpl implements WxAppMsgService {
 
     @Resource
     private WxUtil wxUtil;
@@ -52,5 +47,10 @@ public class WxAppServiceImpl implements WxAppService {
         message.setData(list);
         msgService.sendSubscribeMsg(message);
 
+    }
+
+    @Override
+    public Boolean saveBirthdayRemind(AddBrithdayRemindDTO dto) {
+        return null;
     }
 }

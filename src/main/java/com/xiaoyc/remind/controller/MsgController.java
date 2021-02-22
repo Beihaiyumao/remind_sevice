@@ -1,11 +1,12 @@
 package com.xiaoyc.remind.controller;
 
-import cn.binarywang.wx.miniapp.bean.WxMaSubscribeMessage;
-import com.xiaoyc.remind.service.WxAppService;
+import java.nio.file.Path;
+
+import com.xiaoyc.remind.pojo.AddBrithdayRemindDTO;
+import com.xiaoyc.remind.service.BirthdayRemindService;
+import com.xiaoyc.remind.service.WxAppMsgService;
 import me.chanjar.weixin.common.error.WxErrorException;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -18,10 +19,17 @@ import javax.annotation.Resource;
 public class MsgController {
 
     @Resource
-    private WxAppService wxService;
+    private WxAppMsgService wxService;
+    @Resource
+    private BirthdayRemindService birthdayRemindService;
 
     @GetMapping("/wx")
-    public void  sendSubscribeMsg() throws WxErrorException {
+    public void sendSubscribeMsg() throws WxErrorException {
         wxService.sendSubscribeMsg(null);
+    }
+
+    @PostMapping("/birthday")
+    public Boolean saveBirthday(@RequestBody AddBrithdayRemindDTO dto) {
+        return birthdayRemindService.save(dto);
     }
 }
