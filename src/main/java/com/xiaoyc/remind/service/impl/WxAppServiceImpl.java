@@ -3,7 +3,7 @@ package com.xiaoyc.remind.service.impl;
 import cn.binarywang.wx.miniapp.api.WxMaMsgService;
 import cn.binarywang.wx.miniapp.api.impl.WxMaMsgServiceImpl;
 import cn.binarywang.wx.miniapp.bean.WxMaSubscribeMessage;
-import com.xiaoyc.remind.pojo.AddBrithdayRemindDTO;
+import com.xiaoyc.remind.pojo.AddBirthdayRemindDTO;
 import com.xiaoyc.remind.service.WxAppMsgService;
 import com.xiaoyc.remind.util.WxUtil;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -50,7 +50,7 @@ public class WxAppServiceImpl implements WxAppMsgService {
     }
 
     @Override
-    public Boolean saveBirthdayRemind(AddBrithdayRemindDTO dto) {
+    public Boolean saveBirthdayRemind(AddBirthdayRemindDTO dto) {
         return null;
     }
 }

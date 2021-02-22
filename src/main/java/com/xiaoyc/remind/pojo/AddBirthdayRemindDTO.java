@@ -7,7 +7,7 @@ import lombok.Data;
  * @date 2021/2/22 0022 14:14
  */
 @Data
-public class AddBrithdayRemindDTO {
+public class AddBirthdayRemindDTO {
 
     private String tmplId;
 

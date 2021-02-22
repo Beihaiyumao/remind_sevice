@@ -1,8 +1,6 @@
 package com.xiaoyc.remind.controller;
 
-import java.nio.file.Path;
-
-import com.xiaoyc.remind.pojo.AddBrithdayRemindDTO;
+import com.xiaoyc.remind.pojo.AddBirthdayRemindDTO;
 import com.xiaoyc.remind.service.BirthdayRemindService;
 import com.xiaoyc.remind.service.WxAppMsgService;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -29,7 +27,7 @@ public class MsgController {
     }
 
     @PostMapping("/birthday")
-    public Boolean saveBirthday(@RequestBody AddBrithdayRemindDTO dto) {
+    public Boolean saveBirthday(@RequestBody AddBirthdayRemindDTO dto) {
         return birthdayRemindService.save(dto);
     }
 }

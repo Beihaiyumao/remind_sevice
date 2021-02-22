@@ -3,7 +3,7 @@ package com.xiaoyc.remind.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xiaoyc.remind.entity.BirthdayRemind;
-import com.xiaoyc.remind.pojo.AddBrithdayRemindDTO;
+import com.xiaoyc.remind.pojo.AddBirthdayRemindDTO;
 
 /**
  * <p>
@@ -21,7 +21,7 @@ public interface BirthdayRemindService extends IService<BirthdayRemind> {
      * @params [dto]
      * @return java.lang.Boolean
      * @author xiaoyc
-     * @date 2021/2/22 0022 15:27
+     * @date 2021/2/22 0022 15:38
      **/
-    Boolean save(AddBrithdayRemindDTO dto);
+    Boolean save(AddBirthdayRemindDTO dto);
 }
