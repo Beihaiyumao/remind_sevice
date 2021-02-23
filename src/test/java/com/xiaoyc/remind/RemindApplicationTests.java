@@ -1,6 +1,5 @@
 package com.xiaoyc.remind;
 
-import com.xiaoyc.remind.dao.UserMapper;
 import com.xiaoyc.remind.entity.BirthdayRemind;
 import com.xiaoyc.remind.service.BirthdayRemindService;
 import com.xiaoyc.remind.util.RedisUtil;
@@ -15,9 +14,6 @@ class RemindApplicationTests {
     @Test
     void contextLoads() {
     }
-
-    @Resource
-    private UserMapper userMapper;
 
     @Test
     public void add() {
