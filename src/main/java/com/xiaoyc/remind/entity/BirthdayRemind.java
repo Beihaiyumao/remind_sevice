@@ -33,5 +33,7 @@ public class BirthdayRemind implements Serializable {
 
     private String remarks;
 
+    private String birthdayName;
+
 
 }

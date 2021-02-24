@@ -2,11 +2,13 @@ package com.xiaoyc.remind;
 
 import com.xiaoyc.remind.entity.BirthdayRemind;
 import com.xiaoyc.remind.service.BirthdayRemindService;
+import com.xiaoyc.remind.service.FreeSMSService;
 import com.xiaoyc.remind.util.RedisUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 
 @SpringBootTest
 class RemindApplicationTests {
@@ -39,5 +41,13 @@ class RemindApplicationTests {
         remind.setTmplId("qjQPnre4KBKETmfyNtbhxKK-72j2qt9o9lLktszTpq0");
         remind.setRemarks("生日提醒测试");
         birthdayRemindService.save(remind);
+    }
+
+    @Resource
+    private FreeSMSService freeSMSService;
+
+    @Test
+    public void setFreeSMS() throws IOException {
+        freeSMSService.smsInfoList("19815151534").forEach(System.out::println);
     }
 }

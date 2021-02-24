@@ -3,7 +3,7 @@ package com.xiaoyc.remind.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xiaoyc.remind.entity.BirthdayRemind;
-import com.xiaoyc.remind.pojo.AddBirthdayRemindDTO;
+import com.xiaoyc.remind.pojo.dto.AddBirthdayRemindDTO;
 
 /**
  * <p>

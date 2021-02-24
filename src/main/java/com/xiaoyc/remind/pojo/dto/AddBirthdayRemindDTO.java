@@ -1,4 +1,4 @@
-package com.xiaoyc.remind.pojo;
+package com.xiaoyc.remind.pojo.dto;
 
 import lombok.Data;
 

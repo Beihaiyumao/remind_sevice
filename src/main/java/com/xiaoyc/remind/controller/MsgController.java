@@ -1,6 +1,6 @@
 package com.xiaoyc.remind.controller;
 
-import com.xiaoyc.remind.pojo.AddBirthdayRemindDTO;
+import com.xiaoyc.remind.pojo.dto.AddBirthdayRemindDTO;
 import com.xiaoyc.remind.service.BirthdayRemindService;
 import com.xiaoyc.remind.service.WxAppMsgService;
 import me.chanjar.weixin.common.error.WxErrorException;

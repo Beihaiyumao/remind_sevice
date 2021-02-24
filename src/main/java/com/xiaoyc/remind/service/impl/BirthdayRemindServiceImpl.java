@@ -3,7 +3,7 @@ package com.xiaoyc.remind.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xiaoyc.remind.dao.BirthdayRemindMapper;
 import com.xiaoyc.remind.entity.BirthdayRemind;
-import com.xiaoyc.remind.pojo.AddBirthdayRemindDTO;
+import com.xiaoyc.remind.pojo.dto.AddBirthdayRemindDTO;
 import com.xiaoyc.remind.service.BirthdayRemindService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
