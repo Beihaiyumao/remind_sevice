@@ -19,7 +19,7 @@ import java.util.Map;
  * @date 2021/2/24 15:58
  */
 @Service
-public class FreeSMSImpl implements FreeSMSService {
+public class FreeSMSServiceImpl implements FreeSMSService {
 
     /**
      * @description 免费短信列表
@@ -84,4 +84,25 @@ public class FreeSMSImpl implements FreeSMSService {
         return resultList;
     }
 
+    public static void main(String[] args) throws IOException {
+        final String url = "https://www.yinsiduanxin.com/china-phone-number/page/1.html";
+        Document document = Jsoup.connect(url).get();
+       // System.out.println(document);
+        Elements formElement = document.getElementsByClass("layui-card");
+        formElement.forEach(x -> {
+            Elements elementsByClass = x.getElementsByClass("layui-card-header");
+            elementsByClass.forEach(e->{
+                System.out.println(e.getElementsByTag("span").text());
+                System.out.println(e.getElementsByTag("img").attr("src"));
+                System.out.println(e.getElementsByTag("img").attr("alt"));
+                System.out.println(e.getElementsByTag("a").attr("href"));
+            });
+            String src = x.getElementsByTag("span").text();
+            String content = x.getElementsByClass("number").text().replace("复制", "");
+            String number = x.getElementsByClass("btnCopy").text().replace("复制", "");
+            //System.out.println(src);
+
+        });
+        System.out.println(formElement);
+    }
 }
